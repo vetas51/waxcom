@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+  
+  /* Гарнитура шрифта */
+  /* Путь к файлу со шрифтом */
+}
+.first-screen {
+  width: 1920px;
+  height: 1706px;
+  background: url(../img/bg-first-screen.jpg) 0 0 no-repeat;
+}
+.header-nav {
+  width: 1171px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav-logo-title {
+  font-family: Raleway, serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+.header-nav-logo,
+.nav-top-link,
+.cart-link {
+  text-decoration: none;
+  font-family: monserat;
+  color: #ffffff;
+  font-size: 14px;
+}
+.nav-top-link:hover {
+  color: #c7b299;
+}
+.nav-top,
+.cart-search {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+.nav-top-list {
+  padding-right: 30px;
+}
+.nav-top-list:nth-child(8) {
+  padding-right: 0;
+}
