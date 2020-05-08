@@ -1,33 +1,69 @@
-
 @font-face {
   font-family: Raleway; /* Гарнитура шрифта */
   src: url(../fonts/Raleway/Raleway-Regular.ttf); /* Путь к файлу со шрифтом */
+  font-weight: 400;
+  font-style: normal;
 }
-
+@font-face {
+  font-family: Raleway; /* Гарнитура шрифта */
+  src: url(../fonts/Raleway/Raleway-Medium.ttf); /* Путь к файлу со шрифтом */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway; /* Гарнитура шрифта */
+  src: url(../fonts/Raleway/Raleway-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf); /* Путь к файлу со шрифтом */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-Light.ttf); /* Путь к файлу со шрифтом */
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat; /* Гарнитура шрифта */
+  src: url(../fonts/Montserrat/Montserrat-UltraLight.ttf); /* Путь к файлу со шрифтом */
+  font-weight: 100;
+  font-style: normal;
+}
 @width: 1171px;
 @color: #fff;
 @font-size: 14px;
 
+body {
+  color: @color;
+}
 .first-screen {
   width: 1920px;
-  height: 1706px;
   background: url(../img/bg-first-screen.jpg) 0 0 no-repeat;
+  margin: 0 auto;
+}
+.padding-site {
+  padding: 0 19.5% 0 19.5%;
 }
 .header-nav {
   width: @width;
-  margin: 0 auto;
-  border: 1px solid #fff;
-  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-top: 40px;
 }
 .header-nav-logo{
+  width: 182px;
+  margin-right: 220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .header-nav-logo-title {
-  font-family: Raleway, serif;
+  font-family: Raleway, sans-serif;
   font-size: 34px;
   font-weight: 400;
 }
@@ -35,12 +71,24 @@
 .nav-top-link,
 .cart-link{
   text-decoration: none;
-  font-family: monserat;
   color: @color;
   font-size: @font-size;
 }
-.nav-top-link:hover {
+.nav-top-link:hover,
+.header-nav-logo-img:hover,
+.header-nav-logo:hover,
+.cart-link:hover,
+.search:hover {
   color: #c7b299;
+}
+.nav-top {
+  width: 638px;
+  justify-content: space-between;
+}
+.nav-top-link {
+  font-family: Montserra, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
 }
 .nav-top,
 .cart-search {
@@ -54,4 +102,99 @@
 }
 .nav-top-list:nth-child(8) {
   padding-right: 0;
+}
+.cart-search {
+  width: 70px;
+  margin-left: 65px;
+}
+.cart {
+  margin-right: 28px;
+}
+.cart-link:before {
+  display: block;
+  content: "";
+  width: 18px;
+  height: 24px;
+  top: -2px;
+  left: -30px;
+  background-image: url(../img/cart.png);
+  background-size: cover;
+}
+.label-search {
+  display: none;
+}
+.search:before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: -2px;
+  left: -30px;
+  background-image: url(../img/search.png);
+  background-size: cover;
+}
+/*-Slider-*/
+.slider {
+  width: 100%;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+}
+.slider-heading {
+  display: block;
+  margin: 307px 0 15px 0;
+  font-size: 36px;
+  font-weight: 500;
+}
+.slider-heading-h2 {
+  display: block;
+  margin: 0 0 29px 0;
+  font-size: 52px;
+  font-weight: 700;
+}
+.slider-heading-description {
+  margin: 0 0 52px 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.button {
+  display: block;
+  text-decoration: none;
+  color: @color;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23px;
+  text-transform: uppercase;
+  padding: 15px 0 15px 0;
+  margin: 0 auto;
+  width: 170px;
+  background-color: #998675;
+  border-radius: 3px;
+  box-shadow: inset 0 -3px 0 #736357;
+}
+.slider-item {
+  margin: 325px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-item-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px 0 0;
+  width: 11px;
+  height: 11px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.slider-item-link:active {
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #d3c1ad;
+  box-sizing: border-box;
 }
