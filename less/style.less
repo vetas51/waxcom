@@ -1,12 +1,14 @@
-@import "font";
+@import "fonts";
 @import "variables";
-
+@import "mixins";
+/*подключаемые файлы*/
 
 body {
   color: @color;
 }
 .first-screen {
   width: 1920px;
+  height: 1025px;
   background: url(../img/bg-first-screen.jpg) 0 0 no-repeat;
   margin: 0 auto;
 }
@@ -18,6 +20,7 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 40px;
+
 }
 .header-nav-logo{
   width: 182px;
@@ -27,9 +30,7 @@ body {
   align-items: center;
 }
 .header-nav-logo-title {
-  font-family: Raleway, sans-serif;
-  font-size: 34px;
-  font-weight: 400;
+    .txt(Raleway, 34px, 400);
 }
 .header-nav-logo,
 .nav-top-link,
@@ -39,25 +40,18 @@ body {
   font-size: @font-size;
 }
 .nav-top-link:hover,
-.header-nav-logo-img:hover,
-.header-nav-logo:hover,
-.cart-link:hover,
-.search:hover {
+.header-nav-logo:hover {
   color: #c7b299;
 }
-.nav-top {
-  width: 638px;
-  justify-content: space-between;
-}
+
 .nav-top-link {
-  font-family: Montserra, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
+  .txt(Montserrat, 14px, 300);
 }
 .nav-top,
 .cart-search {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-left: 0;
 }
@@ -117,10 +111,7 @@ body {
 }
 .slider-heading-description {
   margin: 0 0 52px 0;
-  font-family: Montserrat, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
+  .txt(Montserrat, 16px, 300)
 }
 .button {
   display: block;
@@ -151,7 +142,7 @@ body {
   height: 11px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  border: 1px solid red;
+  border: 3px solid black;
   box-sizing: border-box;
 }
 .slider-item-link:active {
