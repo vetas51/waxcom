@@ -3,80 +3,75 @@
   src: url(../fonts/Raleway/Raleway-Regular.ttf);
   font-weight: 400;
   font-style: normal;
-  /* Гарнитура шрифта */
-  /* Путь к файлу со шрифтом */
 }
 @font-face {
   font-family: Raleway;
   src: url(../fonts/Raleway/Raleway-Medium.ttf);
   font-weight: 500;
   font-style: normal;
-  
-  /* Гарнитура шрифта */
-  /* Путь к файлу со шрифтом */
 }
 @font-face {
   font-family: Raleway;
   src: url(../fonts/Raleway/Raleway-ExtraBold.ttf);
   font-weight: 700;
   font-style: normal;
-  
-  /* Гарнитура шрифта */
-  /* Путь к файлу со шрифтом */
 }
 @font-face {
   font-family: Montserrat;
   src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
   font-weight: 400;
   font-style: normal;
-  
-  /* Гарнитура шрифта */
-  /* Путь к файлу со шрифтом */
 }
 @font-face {
   font-family: Montserrat;
   src: url(../fonts/Montserrat/Montserrat-Light.ttf);
   font-weight: 300;
   font-style: normal;
-  
-  /* Гарнитура шрифта */
-  /* Путь к файлу со шрифтом */
 }
 @font-face {
   font-family: Montserrat;
   src: url(../fonts/Montserrat/Montserrat-UltraLight.ttf);
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
-  
-  /* Гарнитура шрифта */
-  /* Путь к файлу со шрифтом */
 }
+/*подключаемые файлы*/
 body {
   color: #ffffff;
+  font-size: 14px;
 }
 .first-screen {
-  width: 1920px;
+  width: 1903px;
+  /*height: 1025px;*/
   background: url(../img/bg-first-screen.jpg) 0 0 no-repeat;
   margin: 0 auto;
 }
-.padding-site {
+/*.padding-site {
   padding: 0 19.5% 0 19.5%;
-}
+}*/
 .header-nav {
-  width: 1171px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
   padding-top: 40px;
 }
 .header-nav-logo {
-  width: 182px;
   margin-right: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header-nav-logo-title {
-  font-family: Raleway, sans-serif;
+  font-family: Raleway;
   font-size: 34px;
   font-weight: 400;
 }
@@ -88,26 +83,26 @@ body {
   font-size: 14px;
 }
 .nav-top-link:hover,
-.header-nav-logo-img:hover,
-.header-nav-logo:hover,
-.cart-link:hover,
-.search:hover {
+.header-nav-logo:hover {
   color: #c7b299;
 }
-.nav-top {
-  width: 638px;
-  justify-content: space-between;
-}
 .nav-top-link {
-  font-family: Montserra, sans-serif;
+  font-family: Montserrat;
   font-size: 14px;
   font-weight: 300;
 }
 .nav-top,
 .cart-search {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 0;
 }
 .nav-top-list {
@@ -154,7 +149,7 @@ body {
 }
 .slider-heading {
   display: block;
-  margin: 307px 0 15px 0;
+  margin: 287px 0 15px 0;
   font-size: 36px;
   font-weight: 500;
 }
@@ -166,10 +161,9 @@ body {
 }
 .slider-heading-description {
   margin: 0 0 52px 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat;
   font-size: 16px;
   font-weight: 300;
-  line-height: 24px;
 }
 .button {
   display: block;
@@ -177,31 +171,40 @@ body {
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
-  line-height: 23px;
   text-transform: uppercase;
   padding: 15px 0 15px 0;
-  margin: 0 auto;
+  margin: 0 874px 300px 875px;
   width: 170px;
   background-color: #998675;
   border-radius: 3px;
-  box-shadow: inset 0 -3px 0 #736357;
+  -webkit-box-shadow: inset 0 -3px 0 #736357;
+          box-shadow: inset 0 -3px 0 #736357;
 }
 .slider-item {
-  margin: 325px 0 40px 0;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
 }
 .slider-item-link {
   display: inline-block;
   text-decoration: none;
-  margin: 0 10px 0 0;
+  margin: 0 15px 0 0;
   width: 11px;
   height: 11px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  border: 1px solid red;
-  box-sizing: border-box;
+}
+.slider-item-link:nth-child(5) {
+  margin-right: 0;
 }
 .slider-item-link:active {
   background-color: transparent;
@@ -209,5 +212,7 @@ body {
   height: 15px;
   border-radius: 50%;
   border: 2px solid #d3c1ad;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+/*# sourceMappingURL=style.css.map */
